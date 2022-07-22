@@ -1,7 +1,9 @@
-
     let clickTitle = document.querySelector("#formTitle");
     let clickText = document.querySelector("#formText");
     let clickButton = document.querySelector("#formButton");
+    let clickImage = document.querySelector("#formImage");
+
+
 
 
     clickTitle.addEventListener("click", () => { 
@@ -69,20 +71,18 @@
         if (clickImage.checked == true){
 
                 let cardImage = document.createElement("img");
-                cardButton.setAttribute("src","");
-                cardButton.setAttribute("type","button");
-                cardButton.setAttribute("class","btn btn-primary");
-
-                cardButton.textContent ="Button";
+                cardImage.setAttribute("id","card-image");
+                cardImage.setAttribute("src","sea_beach.jpg");
+                cardImage.setAttribute("class","img-thumbnail");
                 
                 let componentShowDiv= document.querySelector("#show-component-div")
-                componentShowDiv.appendChild(cardButton);
+                componentShowDiv.appendChild(cardImage);
         
         }
         else {
             let componentShowDiv= document.querySelector("#show-component-div")
-            let removeCardButton = componentShowDiv.querySelector("#card-button");
-            componentShowDiv.removeChild(removeCardButton);
+            let removeCardImage = componentShowDiv.querySelector("#card-image");
+            componentShowDiv.removeChild(removeCardImage);
         }
     
     });
